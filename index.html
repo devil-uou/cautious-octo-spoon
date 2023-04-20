@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            background-color: aqua;
+            padding: 0px;
+            position: absolute;
+            visibility: .7;
+        }
+        .inner {
+            background-color: red;
+            width: 100px;
+            height: 400px;
+            margin: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <script>
+        function Fn() {}
+        let ret = Fn.prototype.test = function () {
+            console.log(this)
+            return this.constructor()
+        }
+        Fn.prototype.test()
+        let f = new Fn() 
+        f.test()
+
+    </script>
+</body>
+</html>
